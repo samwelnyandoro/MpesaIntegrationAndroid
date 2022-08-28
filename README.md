@@ -23,7 +23,7 @@ For testing purposes, you can get test credentials [here](https://developer.safa
 Use the *Lipa Na Mpesa Online Shortcode* and *Lipa Na Mpesa Online Passkey* from the link.
 ## Integrating with your app
 1. Add the SDK to your project
-    ```  implementation 'com.github.samwelnyandoro:MpesaIntegrationAndroid:v1.0.0''```
+    ```  implementation 'com.github.samwelnyandoro:MpesaIntegrationAndroid:v1.0.0'```
     
 2. Initialize the SDK
     ```Mpesa.with(context, CONSUMER_KEY, CONSUMER_SECRET);```
