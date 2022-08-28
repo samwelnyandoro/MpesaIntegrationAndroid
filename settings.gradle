@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() //JCenter Maven repository is no longer receiving updates: newer library versions may be available elsewhere
+
+    }
+}
+rootProject.name = "MpesaIntegrationAndroid"
+include ':app'
+include ':mpesa'
