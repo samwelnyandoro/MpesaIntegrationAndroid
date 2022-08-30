@@ -2,6 +2,15 @@
 With the use of this SDK, Android app developers may quickly accept payments through MPESA.
 # Screenshots
 
+<p align="center">
+  You can use this service for free. I'm looking for sponsors to help us keep up with this service❤️
+</p>
+<p align="center">
+  <a href="https://github.com/sponsors/samwelnyandoro">
+    <img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=ff69b4"/> 
+  </a>
+</p>
+
 	
 # Features
 The following is contained in the SDK:
