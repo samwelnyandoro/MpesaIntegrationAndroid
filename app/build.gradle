@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -31,6 +32,7 @@ android {
 dependencies {
     //butter knife
     implementation libs.butterknife
+    implementation libs.firebase.messaging
     annotationProcessor libs.butterknife.compiler
     //Networking
     implementation libs.retrofit
