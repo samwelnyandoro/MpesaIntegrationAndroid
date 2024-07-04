@@ -53,7 +53,7 @@ public class STKPush {
         private String partyA;
         private String partyB;
         private String phoneNumber;
-        private String callBackURL = "https://mpesa.bdhobare.com/mpesa";
+        private String callBackURL = "http://96.126.112.39/samwel/projects/mpesasdk/mpesa";
         private String accountReference;
         private String transactionDesc;
         private String firebaseRegID = "";
