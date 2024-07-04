@@ -14,7 +14,6 @@ import com.google.firebase.messaging.RemoteMessage;
 import org.json.JSONObject;
 
 public class MPESAMessagingService extends FirebaseMessagingService {
-
     private static final String TAG = "MPESAMessagingService";
 
     /**
