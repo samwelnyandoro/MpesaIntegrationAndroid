@@ -1,18 +1,25 @@
 package com.mpesaandroidintegration.mpesaintegrationandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.afollestad.materialdialogs.GravityEnum;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.mpesaandroidintegration.mpesa.Mpesa;
 import com.mpesaandroidintegration.mpesa.interfaces.AuthListener;
 import com.mpesaandroidintegration.mpesa.interfaces.MpesaListener;
@@ -111,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
                 .positiveText("OK")
                 .cancelable(false)
                 .widgetColorRes(R.color.colorPrimary)
-                .callback(new ButtonCallback() {
+                .callback(new MaterialDialog.ButtonCallback() {
                     @Override
                     public void onPositive(MaterialDialog dialog) {
                         super.onPositive(dialog);
