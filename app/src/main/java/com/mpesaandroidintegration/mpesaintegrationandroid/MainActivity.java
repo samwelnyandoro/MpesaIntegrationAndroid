@@ -2,7 +2,22 @@ package com.mpesaandroidintegration.mpesaintegrationandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.mpesaandroidintegration.mpesa.Mpesa;
+import com.mpesaandroidintegration.mpesa.interfaces.AuthListener;
+import com.mpesaandroidintegration.mpesa.interfaces.MpesaListener;
+import com.mpesaandroidintegration.mpesa.models.STKPush;
+import com.mpesaandroidintegration.mpesa.utils.Pair;
 
 public class MainActivity extends AppCompatActivity implements AuthListener, MpesaListener {
     //TODO: Replace these values from
@@ -35,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
         dialog.setMessage("Processing");
         dialog.setIndeterminate(true);
 
-        pay.setOnClickListener(new OnClickListener() {
+        pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String p = phone.getText().toString();
@@ -75,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
     }
     private void pay(String phone, int amount){
         dialog.show();
-        STKPush.Builder builder = new Builder(BUSINESS_SHORT_CODE, PASSKEY, amount,BUSINESS_SHORT_CODE, phone);
+        STKPush.Builder builder = new STKPush.Builder(BUSINESS_SHORT_CODE, PASSKEY, amount,BUSINESS_SHORT_CODE, phone);
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         String token = sharedPreferences.getString("InstanceID", "");
