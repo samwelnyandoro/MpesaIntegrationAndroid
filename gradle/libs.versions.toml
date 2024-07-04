@@ -1,5 +1,28 @@
 [versions]
+appcompat = "1.7.0"
+butterknife = "10.2.3"
+constraintlayout = "2.1.4"
+espressoCore = "3.6.1"
+gson = "2.10.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+material = "1.12.0"
+okhttp = "4.12.0"
+retrofit = "2.10.0"
 
 [libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+butterknife = { module = "com.jakewharton:butterknife", version.ref = "butterknife" }
+butterknife-compiler = { module = "com.jakewharton:butterknife-compiler", version.ref = "butterknife" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+junit = { module = "junit:junit", version.ref = "junit" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 
 [plugins]
