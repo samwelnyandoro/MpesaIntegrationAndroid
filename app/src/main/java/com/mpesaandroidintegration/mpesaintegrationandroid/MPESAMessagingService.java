@@ -57,7 +57,6 @@ public class MPESAMessagingService extends FirebaseMessagingService {
     }
     // [END receive_message]
 
-
     /**
      * Handle time allotted to BroadcastReceivers.
      */
@@ -81,7 +80,6 @@ public class MPESAMessagingService extends FirebaseMessagingService {
             Log.e(TAG, "Exception: " + e.getMessage());
         }
     }
-
     /**
      * Create and show a simple notification containing the received FCM message.
      *
