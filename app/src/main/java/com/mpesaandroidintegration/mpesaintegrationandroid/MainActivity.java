@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
             @Override
             public void onClick(View view) {
                 String p = phone.getText().toString();
-                int a = Integer.valueOf(amount.getText().toString());
+                int a = Integer.parseInt(amount.getText().toString());
                 if (p.isEmpty()){
                     phone.setError("Enter phone.");
                     return;
