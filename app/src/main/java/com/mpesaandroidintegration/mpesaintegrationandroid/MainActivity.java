@@ -86,25 +86,20 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
 
     @Override
     public void onAuthSuccess() {
-
         //TODO make payment
         pay.setEnabled(true);
     }
+
     private void pay(String phone, int amount){
         dialog.show();
         STKPush.Builder builder = new STKPush.Builder(BUSINESS_SHORT_CODE, PASSKEY, amount,BUSINESS_SHORT_CODE, phone);
-
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
         String token = sharedPreferences.getString("InstanceID", "");
-
         builder.setFirebaseRegID(token);
         STKPush push = builder.build();
-
-
-
         Mpesa.getInstance().pay(this, push);
-
     }
+
     private void showDialog(String title, String message,int code){
         MaterialDialog dialog = new MaterialDialog.Builder(this)
                 .title(title)
@@ -143,14 +138,14 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
         dialog.hide();
         Toast.makeText(this, CustomerMessage, Toast.LENGTH_SHORT).show();
     }
+
     @Override
     protected void onResume() {
         super.onResume();
-
         LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
                 new IntentFilter(NOTIFICATION));
-
     }
+
     @Override
     protected void onPause() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
