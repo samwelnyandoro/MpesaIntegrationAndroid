@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
     public static final String CALLBACK_URL = "YOUR_CALLBACK_URL";
     public static final String  NOTIFICATION = "PushNotification";
     public static final String SHARED_PREFERENCES = "com.mpesaandroidintegration.mpesaintegrationandroid";
-
     Button pay;
     ProgressDialog dialog;
     EditText phone;
