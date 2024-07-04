@@ -2,6 +2,8 @@ package com.mpesaandroidintegration.mpesaintegrationandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
     ProgressDialog dialog;
     EditText phone;
     EditText amount;
-
+    private AlertDialog progressDialog;
     private BroadcastReceiver mRegistrationBroadcastReceiver;
 
     @Override
