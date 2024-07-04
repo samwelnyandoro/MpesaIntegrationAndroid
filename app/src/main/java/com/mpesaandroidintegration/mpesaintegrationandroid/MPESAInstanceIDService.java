@@ -2,12 +2,15 @@ package com.mpesaandroidintegration.mpesaintegrationandroid;
 
 import android.content.SharedPreferences;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import com.google.firebase.messaging.FirebaseMessagingService;
 
 public class MPESAInstanceIDService extends FirebaseMessagingService {
     private static final String TAG = "MPESAInstanceIDService";
     @Override
-    public void onNewToken(String token) {
+    public void onNewToken(@NonNull String token) {
         Log.d(TAG, "Refreshed token: " + token);
 
         // Save token to shared preferences

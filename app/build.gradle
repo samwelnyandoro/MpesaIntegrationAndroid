@@ -30,6 +30,8 @@ android {
 }
 
 dependencies {
+    //butter knife
+    implementation libs.firebase.messaging
     implementation libs.core
     //The mpesa Library
     implementation project(':mpesa')
