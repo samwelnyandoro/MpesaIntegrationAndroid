@@ -30,17 +30,7 @@ android {
 }
 
 dependencies {
-    //butter knife
-    implementation libs.butterknife
-    implementation libs.firebase.messaging
-    annotationProcessor libs.butterknife.compiler
     implementation libs.core
-    //Networking
-    implementation libs.retrofit
-    implementation libs.converter.gson
-    implementation libs.okhttp
-    implementation libs.logging.interceptor
-    implementation libs.gson
     //The mpesa Library
     implementation project(':mpesa')
     // library dependency
