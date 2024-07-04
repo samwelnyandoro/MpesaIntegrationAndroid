@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
                     String message = intent.getStringExtra("message");
                     int code = intent.getIntExtra("code", 0);
                     showDialog(title, message, code);
-
                 }
             }
         };
