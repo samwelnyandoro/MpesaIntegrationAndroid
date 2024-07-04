@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
     public static final String CONSUMER_KEY = "3i1GeIFgDjlsFHHG90YmREkuxCskO8Fm";
     public static final String CONSUMER_SECRET = "iMaqxYHjwCCrcfcH";
     public static final String CALLBACK_URL = "YOUR_CALLBACK_URL";
-
     public static final String  NOTIFICATION = "PushNotification";
     public static final String SHARED_PREFERENCES = "com.mpesaandroidintegration.mpesaintegrationandroid";
 
@@ -46,9 +45,9 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pay = (Button)findViewById(R.id.pay);
-        phone = (EditText)findViewById(R.id.phone);
-        amount = (EditText)findViewById(R.id.amount);
+        pay = findViewById(R.id.pay);
+        phone = findViewById(R.id.phone);
+        amount = findViewById(R.id.amount);
         Mpesa.with(this, CONSUMER_KEY, CONSUMER_SECRET);
         dialog = new ProgressDialog(this);
         dialog.setMessage("Processing");
