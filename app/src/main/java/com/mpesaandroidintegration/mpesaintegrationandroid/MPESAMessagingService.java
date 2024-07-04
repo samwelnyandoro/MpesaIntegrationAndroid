@@ -15,7 +15,6 @@ import org.json.JSONObject;
 
 public class MPESAMessagingService extends FirebaseMessagingService {
     private static final String TAG = "MPESAMessagingService";
-
     /**
      * Called when message is received.
      *
@@ -39,7 +38,7 @@ public class MPESAMessagingService extends FirebaseMessagingService {
         //Log.d(TAG, "From: " + remoteMessage.getFrom());
 
         // Check if message contains a data payload.
-        if (remoteMessage.getData().size() > 0) {
+        if (!remoteMessage.getData().isEmpty()) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
 
             handleNow(remoteMessage.getData().toString());
