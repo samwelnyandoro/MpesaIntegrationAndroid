@@ -27,14 +27,26 @@ For testing purposes, you can get test credentials [here](https://developer.safa
 Use the *Lipa Na Mpesa Online Shortcode* and *Lipa Na Mpesa Online Passkey* from the link.
 ## Integrating with your app
 1. Add the SDK to your project
-    ```  implementation 'com.github.samwelnyandoro:MpesaIntegrationAndroid:v1.0.0'```
-    
-2. Initialize the SDK
+
+   ```dependencyResolutionManagement {
+		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositories {
+			mavenCentral()
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+      dependencies {
+	        implementation 'com.github.samwelnyandoro:MpesaIntegrationAndroid:1.1.0'
+	}
+
+
+3. Initialize the SDK
     ```Mpesa.with(context, CONSUMER_KEY, CONSUMER_SECRET);```
     
     You can optionally pass the mode as the third parameter , either `SANDBOX` or `PRODUCTION`
       ```Mpesa.with(context, CONSUMER_KEY, CONSUMER_SECRET, Mode.PRODUCTION);```
-3. Implement the `AuthListener` interface in your activity.The interface provides two methods
+4. Implement the `AuthListener` interface in your activity.The interface provides two methods
 * ```public void onAuthError(Pair<Integer, String> result)```
     This method is called when initializing the Mpesa instance fails.You can get the response code using `result.code` and the error message using `result.message`. Make sure your credentials are correct
 * ``` public void onAuthSuccess()``` 
