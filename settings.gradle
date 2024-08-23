@@ -10,7 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() //JCenter Maven repository is no longer receiving updates: newer library versions may be available elsewhere
+        //jcenter() //JCenter Maven repository is no longer receiving updates: newer library versions may be available elsewhere
 
     }
 }
