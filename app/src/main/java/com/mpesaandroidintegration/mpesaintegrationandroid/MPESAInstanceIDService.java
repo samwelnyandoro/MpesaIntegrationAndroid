@@ -15,11 +15,9 @@ public class MPESAInstanceIDService extends FirebaseMessagingService {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString("InstanceID", token);
         editor.apply();
-
         // Optionally, send token to your app server.
         sendRegistrationToServer(token);
     }
-
     private void sendRegistrationToServer(String token) {
         // Implement this method to send token to your app server.
     }
